@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>MyStore 🛒</h2>
+    <div>
+        <a href="index.html">Home</a>
+    </div>
+</div>
+
+<h1>Your Cart</h1>
+
+<div class="cart-container">
+    <div id="cart-items"></div>
+    <h3 id="total"></h3>
+
+    <h3>Select Payment</h3>
+    <select id="payment">
+        <option>Cash on Delivery</option>
+        <option>UPI</option>
+        <option>Card</option>
+    </select>
+
+    <br><br>
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>
