@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+</head>
+<body>
+
+<h2>Signup</h2>
+
+<input type="text" id="username" placeholder="Enter Username"><br><br>
+<input type="password" id="password" placeholder="Enter Password"><br><br>
+
+<button onclick="signup()">Signup</button>
+
+<p>Already have account? <a href="login.html">Login here</a></p>
+
+<script>
+function signup() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (!username || !password) {
+        alert("Enter all fields ❌");
+        return;
+    }
+
+    fetch("http://localhost:5000/signup", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+    })
+    .then(res => res.text())
+    .then(msg => {
+        alert(msg);
+        
+        // After signup, go to login
+        if (msg.includes("✅")) {
+            window.location.href = "login.html";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
