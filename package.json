@@ -11,7 +11,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+<<<<<<< HEAD
     "@mongodb-js/saslprep": "^1.4.9",
+=======
+>>>>>>> f1af1ea8df125c9b3131e066a5156c4645f667c1
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "mongoose": "^9.5.0"
